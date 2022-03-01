@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,10 +27,6 @@
     <script type="module">
         import { BrotliDecode } from './decode.min.js';
         Blazor.start({
-            reconnectionHandler: {
-                onConnectionDown: (options, error) => console.error(error),
-                onConnectionUp: () => console.log("Up, up, and away!")
-            },
             loadBootResource: function (type, name, defaultUri, integrity) {
                 console.log(`Loading: '${type}', '${name}', '${defaultUri}', '${integrity}'`);
                 if (type !== 'dotnetjs' && location.hostname !== 'localhost') {

@@ -1,0 +1,5 @@
+PWA不能用import { BrotliDecode } from './decode.min.js'; 直接会导致pwa离线功能失效 , 就走nginx自己的br就够
+
+hash校验可以强制关掉或者自己再算一遍.  .map(asset => new Request(asset.url, {  cache: 'no-cache' }));
+
+空wasm [非pwa] 工程,用上面的js. 的确纯走br了
